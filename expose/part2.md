@@ -46,3 +46,17 @@
     6.  True
         1.  Boolean(2) returns true, since it's typecast during the process the type is the same, and the value is the same, therefore the comparison is true. 
 15. The "==" operator converts the type before comparison, whereas "===" compares the values as well as the data types of the values being compared. It'll return false if the types aren't the same even if the values are the same.
+16. Below:
+    let object = {
+    redCars: 21,
+    blueCars: 45,
+    greenCars: 12,
+    raceCars: 5,
+    blackCars: 40,
+    rareCars: 2
+  };
+  for (property in object) {
+    console.log(`${property}: ${object[property]}`);
+  }
+
+17.  When the function is originally called it runs the initial function modifyArray, and steps into the for loop, and in the for loop it calls the second function "doSomething". There we take the value from the array we're calling the method on, pass it to the second method where it's multiplied by 2, then returned to the original method, and then pushed into the blank array. After running through the loop it will have a new array with all the values doubled. 
