@@ -46,35 +46,7 @@
     6.  True
         1.  Boolean(2) returns true, since it's typecast during the process the type is the same, and the value is the same, therefore the comparison is true. 
 15. The "==" operator converts the type before comparison, whereas "===" compares the values as well as the data types of the values being compared. It'll return false if the types aren't the same even if the values are the same.
-16. Below:
-    let object = {
-    redCars: 21,
-    blueCars: 45,
-    greenCars: 12,
-    raceCars: 5,
-    blackCars: 40,
-    rareCars: 2
-  };
-  for (property in object) {
-    console.log(`${property}: ${object[property]}`);
-  }
-
+16. See Q16.js:
 17.  When the function is originally called it runs the initial function modifyArray, and steps into the for loop, and in the for loop it calls the second function "doSomething". There we take the value from the array we're calling the method on, pass it to the second method where it's multiplied by 2, then returned to the original method, and then pushed into the blank array. After running through the loop it will have a new array with all the values doubled. 
-18.  Below:
-function printSeconds() {
-  let start = 0;
-  let max = 60;
-
-  setTimeout(function go() {
-    let d = new Date();
-    let time = d.toLocaleTimeString();
-    console.log(time);
-    if (start < max) {
-      setTimeout(go, 1000);
-    }
-    start++;
-  }, 1000);
-}
-printSeconds()
-**Note: The Clock stops after a minute because otherwise it runs infinitely, directions didn't tell us whether to stop it or not.**
+18.  See q18.js
 19. The console prints 1, then 4, then 3, and then after a delay it prints 2. 
