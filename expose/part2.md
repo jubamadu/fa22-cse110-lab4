@@ -60,3 +60,21 @@
   }
 
 17.  When the function is originally called it runs the initial function modifyArray, and steps into the for loop, and in the for loop it calls the second function "doSomething". There we take the value from the array we're calling the method on, pass it to the second method where it's multiplied by 2, then returned to the original method, and then pushed into the blank array. After running through the loop it will have a new array with all the values doubled. 
+18.  Below:
+function printSeconds() {
+  let start = 0;
+  let max = 60;
+
+  setTimeout(function go() {
+    let d = new Date();
+    let time = d.toLocaleTimeString();
+    console.log(time);
+    if (start < max) {
+      setTimeout(go, 1000);
+    }
+    start++;
+  }, 1000);
+}
+printSeconds()
+**Note: The Clock stops after a minute because otherwise it runs infinitely, directions didn't tell us whether to stop it or not.**
+19. The console prints 1, then 4, then 3, and then after a delay it prints 2. 
